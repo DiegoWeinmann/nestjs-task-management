@@ -59,7 +59,7 @@ export class TasksController {
   ): Promise<Task> {
     this.logger.verbose(
       `User "${user.username}" creating a new task. Data: ${JSON.stringify(
-        createTaskDto
+        createTaskDto,
       )}`,
     )
     return await this.tasksService.createTask(createTaskDto, user)
