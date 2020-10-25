@@ -10,7 +10,6 @@ export class AuthController {
   async signUp(
     @Body(ValidationPipe) authCredentialsDto: AuthCredentialsDto,
   ): Promise<void> {
-    console.log(authCredentialsDto)
     return this.authService.signUp(authCredentialsDto)
   }
 }
