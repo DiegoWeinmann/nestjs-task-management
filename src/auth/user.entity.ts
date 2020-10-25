@@ -25,7 +25,7 @@ export class User extends BaseEntity {
   salt: string
 
   @OneToMany(
-    type => Task,
+    () => Task,
     task => task.user,
     { eager: true },
   )
